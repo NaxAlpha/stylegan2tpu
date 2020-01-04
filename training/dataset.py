@@ -181,6 +181,7 @@ class TFRecordDataset:
 # Helper func for constructing a dataset object using the given options.
 
 def load_dataset(class_name=None, data_dir=None, verbose=False, **kwargs):
+    print('Loading Dataset from:', data_dir)
     kwargs = dict(kwargs)
     if 'tfrecord_dir' in kwargs:
         if class_name is None:
